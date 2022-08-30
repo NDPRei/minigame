@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://ScrollingBackground.gd" type="Script" id=1]
 [ext_resource path="res://Menu/1.png" type="Texture" id=2]
@@ -14,6 +14,7 @@
 [ext_resource path="res://Menu/Settings_TestHoverSmaller.png" type="Texture" id=12]
 [ext_resource path="res://Menu/Settings_TestPressedSmaller.png" type="Texture" id=13]
 [ext_resource path="res://QuitButton.gd" type="Script" id=14]
+[ext_resource path="res://jogando.tscn" type="PackedScene" id=15]
 
 [sub_resource type="Shader" id=3]
 code = "shader_type canvas_item;
@@ -114,6 +115,9 @@ texture_normal = ExtResource( 5 )
 texture_pressed = ExtResource( 7 )
 texture_hover = ExtResource( 10 )
 script = ExtResource( 14 )
+
+[node name="Node2D" parent="." instance=ExtResource( 15 )]
+position = Vector2( 107, 183 )
 
 [connection signal="pressed" from="VBoxContainer/StartButton" to="TextureRect" method="_on_StartButton_pressed"]
 [connection signal="button_up" from="VBoxContainer/QuitButton" to="VBoxContainer/QuitButton" method="_on_QuitButton_button_up"]
